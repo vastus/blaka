@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 50em;
+  margin: 1em auto;
+  padding: 0 1em;
+  font-family: helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #333;
+  font-weight: 200;
+  font-family: georgia;
+}
+
+header {
+  margin-bottom: 1.5em;
+  border-bottom: 9px solid #2e2e2e;
+
+  // flip vertically
+  // h1 a:before {
+  //   content: 'Blaka';
+  // }
+
+  h1 a {
+    color: #3e3e3e;
+    font-size: 2.1em;
+    font-weight: 200;
+    text-decoration: none;
+  }
+}
+
+#torso {
+  margin-bottom: 2em;
+}
+
+#articles {
+  .article {
+    margin-bottom: 2em;
+
+    .title a {
+      color: #666;
+      display: block;
+      font-size: 1.168em;
+      text-decoration: none;
+      font-family: helvetica, sans-serif;
+    }
+
+    .intro {
+      color: #444;
+      font-size: 1.168em;
+      line-height: 1.5;
+      font-family: georgia, serif;
+    }
+  }
+}
+
+#article {
+  margin-bottom: 2em;
+
+  .title h1 {
+    color: #666;
+    display: block;
+    font-size: 1.756em;
+    text-decoration: none;
+    font-family: helvetica, sans-serif;
+  }
+
+  .intro {
+    margin-bottom: 1em;
+  }
+
+  .intro,
+  .extended {
+    color: #444;
+    font-size: 1.168em;
+    line-height: 1.5;
+    font-family: georgia, serif;
+  }
+}
+
+.field_with_errors {
+  display: inline-block;
+}
+
+.article_errors {
+  h2 {
+    margin-bottom: .5em;
+  }
+
+  ul {
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+footer {
+  width: 99%;
+  margin: 0 auto;
+  padding: 1em 0;
+  border-top: 1px solid #eee;
+
+  p {
+    color: #ccc;
+    font-size: .75em;
+    text-align: center;
+  }
+}

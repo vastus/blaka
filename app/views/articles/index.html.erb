@@ -1,0 +1,14 @@
+<div id="articles">
+  <% for @article in @articles %>
+    <article class="article">
+    <div class="title">
+      <h1><%= link_to_unless_current @article.title, @article %></h1>
+    </div>
+
+    <div class="intro">
+      <%= @article.intro %>
+    </div>
+    </article>
+  <% end %>
+</div>
+

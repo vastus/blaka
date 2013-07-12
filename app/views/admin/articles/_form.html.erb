@@ -1,0 +1,31 @@
+<%= form_for @article, url: path do |f| %>
+  <% if @article.errors.present? %>
+    <div class="article-errors">
+      <h2><%= t('article.errors', default: 'Errors') %></h2>
+      <ul>
+        <% @article.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :title, t('admin.article.title.label', default: 'Title') %><br>
+    <%= f.text_field :title, size: '64', placeholder: t('admin.article.title.placeholder', default: 'Article Title') %>
+  </div>
+
+  <div class="field">
+    <%= f.label :intro, t('admin.article.intro.label', default: 'Intro') %><br>
+    <%= f.text_area :intro, size: '64x8' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :extended, t('admin.article.extended.label', default: 'Extended') %><br>
+    <%= f.text_area :extended, size: '64x8' %>
+  </div>
+
+  <div class="button">
+    <%= f.submit t('admin.article.submit.value', default: 'Send') %>
+  </div>
+<% end %>
+
