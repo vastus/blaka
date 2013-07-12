@@ -24,6 +24,11 @@
     <%= f.text_area :extended, size: '64x8' %>
   </div>
 
+  <div class="field">
+    <%= f.label :category_id, 'Category' %>
+    <%= f.select(:category_id, Category.all.collect {|c| [c.name.capitalize, c.id]}) %>
+  </div>
+
   <div class="button">
     <%= f.submit t('admin.article.submit.value', default: 'Send') %>
   </div>
