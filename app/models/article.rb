@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
   # attrs
-  attr_accessible :extended, :intro, :title
+  attr_accessible :extended, :intro, :title, :category_id
 
   # relationships
   belongs_to :category
@@ -9,3 +9,4 @@ class Article < ActiveRecord::Base
   validates_presence_of :title, :intro, :extended, :category_id
   validates_uniqueness_of :title
 end
+
