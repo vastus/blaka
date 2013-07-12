@@ -6,6 +6,6 @@ class Article < ActiveRecord::Base
   belongs_to :category
 
   # validations
-  validates_presence_of :title, :intro, :extended
+  validates_presence_of :title, :intro, :extended, :category_id
   validates_uniqueness_of :title
 end
