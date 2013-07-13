@@ -6,6 +6,7 @@ Blaka::Application.routes.draw do
   resources :articles
   resources :users
   resources :categories
+  resources :sessions
 
   namespace :admin do
     # Directs /admin/products/* to Admin::ProductsController
