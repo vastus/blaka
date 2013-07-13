@@ -60,9 +60,14 @@ nav {
     border-bottom: 1px solid #666;
   }
 
-  ul li a:hover {
+  ul li a.active {
     color: #333;
     border-bottom: 5px solid #444;
+  }
+
+  ul li a:hover {
+    color: #333;
+    border-bottom: 5px solid #555;
   }
 }
 

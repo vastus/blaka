@@ -15,7 +15,7 @@
     <nav>
       <ul>
         <% for category in Category.all %>
-          <li><%= link_to category.name.capitalize, category %></li>
+          <li><%= link_to_category category %></li>
         <% end %>
       </ul>
     </nav>
