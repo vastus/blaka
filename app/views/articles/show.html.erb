@@ -13,7 +13,8 @@
 
   <div class="meta">
     by <%= link_to @article.author.name, @article.author %>
-    filed under <%= link_to @article.category.name.capitalize, @article.category %>
+    filed under <%= link_to @article.category.name.capitalize, @article.category %> &mdash;
+    posted <%= time_ago_in_words @article.created_at %> ago
   </div>
 </article>
 
