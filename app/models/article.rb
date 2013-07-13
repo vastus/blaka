@@ -4,6 +4,7 @@ class Article < ActiveRecord::Base
 
   # relationships
   belongs_to :category
+  belongs_to :author, foreign_key: :user_id, class_name: 'User'
 
   # validations
   validates_presence_of :title, :intro, :extended, :category_id

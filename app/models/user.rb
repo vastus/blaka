@@ -15,6 +15,9 @@ class User < ActiveRecord::Base
   validates_presence_of :password, on: :create
   validates_confirmation_of :password
   # validates_length_of :password
+  
+  # relationships
+  has_many :articles
 
   def self.authenticate(email, pass)
     if user = find_by_email(email)
