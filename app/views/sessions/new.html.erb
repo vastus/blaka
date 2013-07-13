@@ -1,5 +1,11 @@
 <div id="login">
   <%= form_tag sessions_path do %>
+    <% if flash.alert.present? %>
+      <div class="flash alert">
+        <%= flash.alert %>
+      </div>
+    <% end %>
+
     <div class="field">
       <%= label_tag :email, t('login.form.email.label', default: 'Email') %><br>
       <%= text_field_tag :email, params[:email], placeholder: 'john.doe@mail.com' %>
