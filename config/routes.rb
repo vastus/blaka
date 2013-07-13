@@ -1,7 +1,9 @@
 Blaka::Application.routes.draw do
 
   root to: 'articles#index'
+
   get 'login' => 'sessions#new'
+  get 'logout' => 'sessions#destroy'
 
   resources :articles
   resources :users
