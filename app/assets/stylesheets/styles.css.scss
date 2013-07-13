@@ -33,6 +33,39 @@ header {
   }
 }
 
+nav {
+  ul:before {
+    color: #666;
+    font-style: italic;
+    content: 'Categories: ';
+    padding-right: 1em;
+    font-family: georgia, serif;
+  }
+
+  ul {
+    margin-right: 1em;
+    text-align: right;
+    margin-bottom: 2em;
+  }
+
+  ul li {
+    display: inline;
+    list-style: none;
+  }
+
+  ul li a {
+    color: #555;
+    padding: .3em .75em;
+    text-decoration: none;
+    border-bottom: 1px solid #666;
+  }
+
+  ul li a:hover {
+    color: #333;
+    border-bottom: 5px solid #444;
+  }
+}
+
 #torso {
   margin-bottom: 2em;
 }

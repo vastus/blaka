@@ -1,0 +1,7 @@
+<div class="show-user">
+  <h2>Articles by <%= @user.name %></h2>
+  <% for article in @user.articles %>
+    <%= link_to article.title, article %>
+  <% end %>
+</div>
+
