@@ -102,16 +102,40 @@ nav {
     font-family: helvetica, sans-serif;
   }
 
-  .intro {
-    margin-bottom: 1em;
-  }
-
   .intro,
   .extended {
     color: #444;
     font-size: 1.168em;
     line-height: 1.5;
+    margin-bottom: 1em;
     font-family: georgia, serif;
+  }
+
+  .meta {
+    color: #ccc;
+    font-size: .85em;
+    padding: 1em .75em;
+    background: #2e2e2e;
+  }
+
+  .meta:before {
+    color: #bbb;
+    content: 'Meta: ';
+    font-style: italic;
+    padding-right: .5em;
+    font-family: georgia, serif;
+  }
+
+  .meta a {
+    color: #eee;
+    padding: .15em;
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+
+  .meta a:hover {
+    color: #fff;
+    border-width: 2px;
   }
 }
 
