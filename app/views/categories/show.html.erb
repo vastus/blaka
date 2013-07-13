@@ -1,0 +1,14 @@
+<div id="<%= @category.name %>-articles">
+  <h1>Articles under <%= @category.name.capitalize %></h1>
+
+  <div id="articles">
+    <% for article in @category.articles %>
+      <article class="article">
+        <div class="title">
+          <%= link_to article.title, article %>
+        </div>
+      </article>
+    <% end %>
+  </div>
+</div>
+
