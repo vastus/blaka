@@ -12,6 +12,14 @@
       <h1><%= link_to "Blaka", root_path %></h1>
     </header>
 
+    <nav>
+      <ul>
+        <% for category in Category.all %>
+          <li><%= link_to category.name.capitalize, category %></li>
+        <% end %>
+      </ul>
+    </nav>
+
     <div id="torso">
       <%= yield %>
     </div>
