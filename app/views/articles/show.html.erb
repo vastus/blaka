@@ -10,5 +10,9 @@
   <div class="extended">
     <%= @article.extended %>
   </div>
+
+  <div class="meta">
+    by <%= link_to @article.author.name, @article.author %>
+  </div>
 </article>
 
