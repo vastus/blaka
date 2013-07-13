@@ -16,12 +16,25 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
   # validates_length_of :password
 
+  def self.authenticate(email, pass)
+    if user = find_by_email(email)
+      pass_match?(user, pass) ? user : false
+    else
+      false
+    end
+  end
+
   private
   def generate_password
     if password.present?
       self.password_salt = BCrypt::Engine.generate_salt
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
+  end
+
+  def self.pass_match?(user, pass)
+    hashed = BCrypt::Engine.hash_secret(pass, user.password_salt)
+    hashed == user.password_hash
   end
 end
 
