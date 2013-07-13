@@ -10,6 +10,13 @@
 
     <header>
       <h1><%= link_to "Blaka", root_path %></h1>
+
+      <div id="account">
+        <ul>
+          <% if logged_in? %>
+            <li><%= link_to 'Log out',  logout_path %>
+          <% end %>
+      </div>
     </header>
 
     <nav>
