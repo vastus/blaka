@@ -17,6 +17,7 @@ h1, h2, h3 {
 }
 
 header {
+  position: relative;
   margin-bottom: 1.5em;
   border-bottom: 9px solid #2e2e2e;
 
@@ -29,6 +30,26 @@ header {
     color: #3e3e3e;
     font-size: 2.1em;
     font-weight: 200;
+    text-decoration: none;
+  }
+
+  #account {
+    top: 11px;
+    right: 11px;
+    position: absolute;
+  }
+
+  #account ul {
+  }
+
+  #account ul li {
+    list-style: none;
+    font-size: 0.85em;
+  }
+
+  #account ul li a {
+    color: #230948;
+    padding: .3em .5em;
     text-decoration: none;
   }
 }
