@@ -10,3 +10,9 @@ This is my try to make a useful blog.
 * users (authentication, roles: basic, author, admin)
 * simple admin interface
 
+## Testing it out
+
+To try it out run
+
+```rake app:setup```
+
