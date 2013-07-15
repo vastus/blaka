@@ -9,6 +9,9 @@
       </ul>
     </div>
   <% end %>
+
+  <%= f.hidden_field :user_id, value: current_user.id %>
+
   <div class="field">
     <%= f.label :title, t('admin.article.title.label', default: 'Title') %><br>
     <%= f.text_field :title, size: '64', placeholder: t('admin.article.title.placeholder', default: 'Article Title') %>
