@@ -2,7 +2,7 @@ require 'bcrypt'
 
 class User < ActiveRecord::Base
   # attrs
-  attr_accessible :name, :email, :password_hash, :password_salt, :role
+  attr_accessible :name, :email, :password_hash, :password_salt, :password, :role
 
   # virtual attrs
   attr_accessor :password
@@ -13,9 +13,11 @@ class User < ActiveRecord::Base
   # validations
   validates_presence_of :name, :email, :role
   validates_presence_of :password, on: :create
+  validates_uniqueness_of :email
   validates_confirmation_of :password
   validates_inclusion_of :role, in: %w( admin author user )
   # validates_length_of :password
+  # validates_format_of :email
   
   # relationships
   has_many :articles
