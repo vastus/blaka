@@ -4,11 +4,11 @@
   </div>
 
   <div class="intro">
-    <%= @article.intro %>
+    <%= @article.intro.html_safe %>
   </div>
 
   <div class="extended">
-    <%= @article.extended %>
+    <%= @article.extended.html_safe %>
   </div>
 
   <div class="meta">

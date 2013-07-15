@@ -36,6 +36,7 @@ header {
 nav {
   ul:before {
     color: #666;
+    cursor: default;
     font-style: italic;
     content: 'Categories: ';
     padding-right: 1em;
@@ -125,6 +126,7 @@ nav {
 
   .meta:before {
     color: #bbb;
+    cursor: default;
     content: 'Meta: ';
     font-style: italic;
     padding-right: .5em;
@@ -167,6 +169,7 @@ footer {
 
   p {
     color: #ccc;
+    cursor: default;
     font-size: .75em;
     text-align: center;
   }
