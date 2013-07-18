@@ -22,6 +22,10 @@ class User < ActiveRecord::Base
   # relationships
   has_many :articles
 
+  def role?(role)
+    self.role == role.to_s
+  end
+
   def self.authenticate(email, pass)
     if user = find_by_email(email)
       pass_match?(user, pass) ? user : false
